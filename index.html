@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BROOKIE</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="png" href="LOGO/fav.png">
+  <script type="text/javascript" src="app.js" defer></script>
+</head>
+<body class="home">
+  <nav id="sidebar">
+    <ul>
+      <li>
+        <span class="logo">bR✮✮KIE</span>
+        <button onclick=toggleSidebar() id="toggle-btn">
+		<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M560-280 360-480l200-200v400Z"/></svg>
+        </button>
+      </li>
+      <li class="active">
+        <a href="index.html">
+		<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M240-200h120v-240h240v240h120v-360L480-740 240-560v360Zm-80 80v-480l320-240 320 240v480H520v-240h-80v240H160Zm320-350Z"/></svg>
+          <span>Home</span>
+        </a>
+      </li>
+      <li>
+        <a href="Writing.html">
+		<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M200-200h57l391-391-57-57-391 391v57Zm-80 80v-170l528-527q12-11 26.5-17t30.5-6q16 0 31 6t26 18l55 56q12 11 17.5 26t5.5 30q0 16-5.5 30.5T817-647L290-120H120Zm640-584-56-56 56 56Zm-141 85-28-29 57 57-29-28Z"/></svg>
+          <span>Writing</span>
+        </a>
+      </li>
+      <li>
+        <button onclick=toggleSubMenu(this) class="dropdown-btn">
+		<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="m159-168-34-14q-31-13-41.5-45t3.5-63l72-156v278Zm160 88q-33 0-56.5-23.5T239-160v-240l106 294q3 7 6 13.5t8 12.5h-40Zm206-4q-32 12-62-3t-42-47L243-622q-12-32 2-62.5t46-41.5l302-110q32-12 62 3t42 47l178 488q12 32-2 62.5T827-194L525-84Zm-86-476q17 0 28.5-11.5T479-600q0-17-11.5-28.5T439-640q-17 0-28.5 11.5T399-600q0 17 11.5 28.5T439-560Zm58 400 302-110-178-490-302 110 178 490ZM319-650l302-110-302 110Z"/></svg>
+          <span>Flashcards</span>
+		<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"/></svg>
+        </button>
+        <ul class="sub-menu">
+          <div>
+            <li><a href="Numbers.html">Numbers</a></li>
+            <li><a href="Things.html">Things</a></li>
+            <li><a href="Animals.html">Animals</a></li>
+          </div>
+        </ul>
+      </li>
+      <li>
+        <button onclick=toggleSubMenu(this) class="dropdown-btn">
+		<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M400-400h160v-80H400v80Zm0-120h320v-80H400v80Zm0-120h320v-80H400v80Zm-80 400q-33 0-56.5-23.5T240-320v-480q0-33 23.5-56.5T320-880h480q33 0 56.5 23.5T880-800v480q0 33-23.5 56.5T800-240H320Zm0-80h480v-480H320v480ZM160-80q-33 0-56.5-23.5T80-160v-560h80v560h560v80H160Zm160-720v480-480Z"/></svg>
+          <span>Library</span>
+		  <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"/></svg>
+        </button>
+        <ul class="sub-menu">
+          <div>
+            <li><a href="Short Stories.html">Short Stories</a></li>
+            <li><a href="Fairy Tales.html">Fairy Tales</a></li>
+            <li><a href="Lullabies.html">Lullabies</a></li>
+            <li><a href="Fables.html">Fables</a></li>
+          </div>
+        </ul>
+      </li>
+	  <li>
+        <a href="About.html">
+		<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M440-560q33 0 56.5-23.5T520-640q0-33-23.5-56.5T440-720q-33 0-56.5 23.5T360-640q0 33 23.5 56.5T440-560Zm0 160q45 0 84.5-19t68.5-54q-35-23-73.5-35T440-520q-41 0-79.5 12T287-473q29 35 68.5 54t84.5 19Zm384 280L636-308q-41 32-90.5 50T440-240q-134 0-227-93t-93-227q0-134 93-227t227-93q134 0 227 93t93 227q0 56-18 105.5T692-364l188 188-56 56ZM440-320q100 0 170-70t70-170q0-100-70-170t-170-70q-100 0-170 70t-70 170q0 100 70 170t170 70Zm0-240Z"/></svg>
+          <span>About</span>
+        </a>
+      </li>
+	  <li>
+        <a href="Profile.html">
+		<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M480-480q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47ZM160-160v-112q0-34 17.5-62.5T224-378q62-31 126-46.5T480-440q66 0 130 15.5T736-378q29 15 46.5 43.5T800-272v112H160Zm80-80h480v-32q0-11-5.5-20T700-306q-54-27-109-40.5T480-360q-56 0-111 13.5T260-306q-9 5-14.5 14t-5.5 20v32Zm240-320q33 0 56.5-23.5T560-640q0-33-23.5-56.5T480-720q-33 0-56.5 23.5T400-640q0 33 23.5 56.5T480-560Zm0-80Zm0 400Z"/></svg>
+          <span>Profile</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+  
+  <main>
+<section class="hero-section">
+  <div class="hero-content">
+   <h1>B<span>ROOKIE</span></h1>
+    <p>We've got stories and activities that will make learning an adventure.
+      Brookie helps you boost your brainpower by sharpening your critical thinking skills and reading comprehension – you'll learn to think creatively.
+      We'll help you become a problem-solving pro! Plus, you'll discover new things every day and make learning a blast. 
+      Let’s unlock your amazing potential together!</p>
+       <!-- Change button to link -->
+	   
+    <a href="Profile.html#login" class="btn">Learn Now</a>
+  </div>
+  
+  
+  <div class="floating-image" style="top: 10%; left: 13%;">
+    <img src="FLOAT/george.png" alt="george">
+  </div>
+  <div class="floating-image" style="top: -3%; left: 30%;">
+    <img src="FLOAT/castle.png" alt="castle">
+  </div>
+  <div class="floating-image" style="top: -10%; left: 7%;">
+    <img src="FLOAT/learning.png" alt="learning">
+  </div>  
+  <div class="floating-image" style="top: 13%; left: -3%;">
+    <img src="FLOAT/pencil.png" alt="pencil">
+  </div>
+  <div class="floating-image" style="top: 10%; left: 70%;">
+    <img src="FLOAT/dino.png" alt="dino">
+  </div>  
+  <div class="floating-image" style="top: 5%; left: 50%;">
+    <img src="FLOAT/rainbow.png" alt="rainbow">
+  </div>  
+  <div class="floating-image" style="top: -4%; left: 60%;">
+    <img src="FLOAT/fantasy.png" alt="fantasy">
+  </div>    
+  <div class="floating-image" style="top: -5%; left: 88%;">
+    <img src="FLOAT/ball.png" alt="ball">
+  </div>   
+  <div class="floating-image" style="top: 18%; left: 85%;">
+    <img src="FLOAT/joy.png" alt="joy">
+  </div>  
+  <div class="floating-image" style="top: 65%; left: 20%;">
+    <img src="FLOAT/unicorn.png" alt="unicorn">
+  </div> 
+  <div class="floating-image" style="top: 65%; left: 40%;opacity:100%;">
+    <img src="FLOAT/fun.png" alt="fun">
+  </div>
+  <div class="floating-image" style="top: 56%; left: 60%;">
+    <img src="FLOAT/bunny.png" alt="bunny">
+  </div>
+  <div class="floating-image" style="top: 50%; left: 80%;">
+    <img src="FLOAT/creativity.png" alt="creativity">
+  </div>  
+  <div class="floating-image" style="top: 72%; left: 85%;">
+    <img src="FLOAT/book.png" alt="book">
+  </div>  
+  <div class="floating-image" style="top: 52%; left: 0%;">
+    <img src="FLOAT/car.png" alt="car">
+  </div>
+</section>
+  </main>
+  
+</body>
+</html>
+
+

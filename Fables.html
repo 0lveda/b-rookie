@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BROOKIE</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="png" href="LOGO/1.png">
+  <script type="text/javascript" src="app.js" defer></script>
+</head>
+<body>
+  <nav id="sidebar">
+    <ul>
+      <li>
+        <span class="logo">bR✮✮KIE</span>
+        <button onclick=toggleSidebar() id="toggle-btn">
+		<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M560-280 360-480l200-200v400Z"/></svg>
+        </button>
+      </li>
+      <li>
+        <a href="index.html">
+		<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M240-200h120v-240h240v240h120v-360L480-740 240-560v360Zm-80 80v-480l320-240 320 240v480H520v-240h-80v240H160Zm320-350Z"/></svg>
+          <span>Home</span>
+        </a>
+      </li>
+      <li>
+        <a href="Writing.html">
+		<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M200-200h57l391-391-57-57-391 391v57Zm-80 80v-170l528-527q12-11 26.5-17t30.5-6q16 0 31 6t26 18l55 56q12 11 17.5 26t5.5 30q0 16-5.5 30.5T817-647L290-120H120Zm640-584-56-56 56 56Zm-141 85-28-29 57 57-29-28Z"/></svg>
+          <span>Writing</span>
+        </a>
+      </li>
+      <li>
+        <button onclick=toggleSubMenu(this) class="dropdown-btn">
+		<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="m159-168-34-14q-31-13-41.5-45t3.5-63l72-156v278Zm160 88q-33 0-56.5-23.5T239-160v-240l106 294q3 7 6 13.5t8 12.5h-40Zm206-4q-32 12-62-3t-42-47L243-622q-12-32 2-62.5t46-41.5l302-110q32-12 62 3t42 47l178 488q12 32-2 62.5T827-194L525-84Zm-86-476q17 0 28.5-11.5T479-600q0-17-11.5-28.5T439-640q-17 0-28.5 11.5T399-600q0 17 11.5 28.5T439-560Zm58 400 302-110-178-490-302 110 178 490ZM319-650l302-110-302 110Z"/></svg>
+          <span>Flashcards</span>
+		<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"/></svg>
+        </button>
+        <ul class="sub-menu">
+          <div>
+            <li><a href="Numbers.html">Numbers</a></li>
+            <li><a href="Things.html">Things</a></li>
+            <li><a href="Animals.html">Animals</a></li>
+          </div>
+        </ul>
+      </li>
+      <li>
+        <button onclick=toggleSubMenu(this) class="dropdown-btn">
+		<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M400-400h160v-80H400v80Zm0-120h320v-80H400v80Zm0-120h320v-80H400v80Zm-80 400q-33 0-56.5-23.5T240-320v-480q0-33 23.5-56.5T320-880h480q33 0 56.5 23.5T880-800v480q0 33-23.5 56.5T800-240H320Zm0-80h480v-480H320v480ZM160-80q-33 0-56.5-23.5T80-160v-560h80v560h560v80H160Zm160-720v480-480Z"/></svg>
+          <span>Library</span>
+		  <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"/></svg>
+        </button>
+        <ul class="sub-menu">
+          <div>
+            <li><a href="Short Stories.html">Short Stories</a></li>
+            <li><a href="Fairy Tales.html">Fairy Tales</a></li>
+            <li><a href="Lullabies.html">Lullabies</a></li>
+            <li class="active"><a href="Fables.html">Fables</a></li>
+          </div>
+        </ul>
+      </li>  
+	  <li>
+        <a href="About.html">
+		<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M440-560q33 0 56.5-23.5T520-640q0-33-23.5-56.5T440-720q-33 0-56.5 23.5T360-640q0 33 23.5 56.5T440-560Zm0 160q45 0 84.5-19t68.5-54q-35-23-73.5-35T440-520q-41 0-79.5 12T287-473q29 35 68.5 54t84.5 19Zm384 280L636-308q-41 32-90.5 50T440-240q-134 0-227-93t-93-227q0-134 93-227t227-93q134 0 227 93t93 227q0 56-18 105.5T692-364l188 188-56 56ZM440-320q100 0 170-70t70-170q0-100-70-170t-170-70q-100 0-170 70t-70 170q0 100 70 170t170 70Zm0-240Z"/></svg>
+          <span>About</span>
+        </a>
+      </li>
+      <li>
+        <a href="Profile.html">
+		<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M480-480q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47ZM160-160v-112q0-34 17.5-62.5T224-378q62-31 126-46.5T480-440q66 0 130 15.5T736-378q29 15 46.5 43.5T800-272v112H160Zm80-80h480v-32q0-11-5.5-20T700-306q-54-27-109-40.5T480-360q-56 0-111 13.5T260-306q-9 5-14.5 14t-5.5 20v32Zm240-320q33 0 56.5-23.5T560-640q0-33-23.5-56.5T480-720q-33 0-56.5 23.5T400-640q0 33 23.5 56.5T480-560Zm0-80Zm0 400Z"/></svg>
+          <span>Profile</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+  <main>
+  <div class="tab-buttons">
+  <button class="tab" onclick="showBook(1)">Book 1</button>
+  <button class="tab" onclick="showBook(2)">Book 2</button>
+  <button class="tab" onclick="showBook(3)">Book 3</button>
+  <button class="tab" onclick="showBook(4)">Book 4</button>
+  <button class="tab" onclick="showBook(5)">Book 5</button>
+</div>
+
+<div class="book-wrapper" id="book1">
+  <div class="book">
+    <!-- Page 1 -->
+    <div class="page">
+      <h2>THE ANT AND THE GRASSHOPPER </h2>
+      <p>Once upon a time, there was a busy ant who worked hard all summer collecting food.  A grasshopper saw the ant working and laughed, saying, "Why work so hard? Summer's long!"</p>
+      <p> The grasshopper spent the whole summer singing and dancing. When winter came, the ant had lots of food stored away, but the grasshopper was very hungry and cold! </p>
+    </div>
+    <!-- Page 3 -->
+    <div class="page">
+	  <p>He had no food because he hadn't worked to save any. He learned a big lesson that day about working hard and saving for the future. From then on, he helped the ant collect food so he'd be ready for the next winter! Poor George the grasshopper!</p>
+      <p>He was so hungry and cold in the winter because he spent all summer singing and playing instead of gathering food like the wise ant.  He was so sorry he didn't listen to the ant's advice.</p>
+    </div>
+	<div class="page">
+      <p>He went to the ant's house and asked for help.</p>
+	  <p>The kind ant shared some of her food, and George learned a very important lesson about working hard and being prepared!  He felt very thankful and promised to work hard next summer.</p>
+    </div>
+
+    <!-- Navigation buttons -->
+    <div class="book-nav">
+      <button class="prev" onclick="prevPage()">Previous</button>
+      <button class="next" onclick="nextPage()">Next</button>
+    </div>
+
+    <!-- Cover -->
+    <div class="cover cover-16" onclick="toggleBookCover(this)">
+      <div class="cover-back"></div>
+    </div>
+  </div>
+</div>
+
+<div class="book-wrapper" id="book2" style="display:none;">
+  <div class="book">
+    <!-- Page 1 -->
+    <div class="page">
+      <h2>THE WIND AND THE SUN</h2>
+      <p>The Wind and the Sun were having an argument about which of them was the stronger. They decided to settle the matter with a challenge: whoever could make a traveler remove his coat would be considered the stronger.
+	  The Wind went first.</p>
+      <p> It blew with all its might, trying to force the traveler to take off his coat. But the harder the Wind blew, the more tightly the traveler wrapped his coat around himself.</p>
+	</div>
+    <!-- Page 2 -->
+    <div class="page">
+	 <p>Then the Sun took its turn. It shone warmly and gently. Gradually, the traveler felt the warmth and, feeling comfortable, he took off his coat.</p>
+     <p>The Sun smiled and said, "Gentleness and kindness are always stronger than force and fury."</p>
+	</div>
+	
+    <!-- Navigation buttons -->
+    <div class="book-nav">
+      <button class="prev" onclick="prevPage()">Previous</button>
+      <button class="next" onclick="nextPage()">Next</button>
+    </div>
+
+    <!-- Cover -->
+    <div class="cover cover-17" onclick="toggleBookCover(this)">
+      <div class="cover-back"></div>
+    </div>
+  </div>
+</div>
+
+<div class="book-wrapper" id="book3" style="display:none;">
+  <div class="book">
+    <!-- Page 1 -->
+    <div class="page">
+      <h2>THE LION AND THE MOUSE</h2>
+      <p>Once upon a time, a big, sleepy lion was napping under a tree. A tiny mouse, being super silly, accidentally ran across the lion's nose! The lion woke up with a ROAR!  The scared mouse squeaked, "Please, forgive me!" </p>
+      <p>The lion, even though he was HUGE and the mouse was tiny, felt sorry for the little mouse and let him go. </p>
+    </div>
+    <!-- Page 2 -->
+    <div class="page">
+      <p>The lion thought, "A tiny mouse?  How could that ever help me?" But guess what? Later, the lion got stuck in a hunter's net! He roared and roared, but couldn't get free.</p>
+      <p>Then, who should scurry by but that same little mouse! The mouse chewed through the net, and the lion was free! 
+	  The lion learned that even the littlest creatures can be super helpful, and that being kind is always a good idea! Wow!</p>
+    </div>
+    
+    <div class="page">
+      <p>The lion was in a BIG mess! He was all tangled up in a hunter's net, and he was trying to roar his way out, but it wasn't working. Then, guess who heard him?  That little mouse!  
+	  Even though the mouse was tiny, she bravely started to chew through the ropes of the net.  Snip, snip, snip!  Soon, the lion was free! The lion was SO happy! </p>
+	</div>
+	
+	<div class="page">
+	<p>He remembered how kind he'd been to the mouse before, and he was so grateful for her help.  
+	He said, "You saved my life! We're friends forever!" And they lived happily ever after, proving that even small acts of kindness can make a HUGE difference!</p>
+	</div>
+
+    <!-- Navigation buttons -->
+    <div class="book-nav">
+      <button class="prev" onclick="prevPage()">Previous</button>
+      <button class="next" onclick="nextPage()">Next</button>
+    </div>
+
+    <!-- Cover -->
+    <div class="cover cover-18" onclick="toggleBookCover(this)">
+      <div class="cover-back"></div>
+    </div>
+  </div>
+</div>
+
+<div class="book-wrapper" id="book4" style="display:none;">
+  <div class="book">
+    <!-- Page 1 -->
+    <div class="page">
+      <h2>THE BOY WHO CRIED WOLF</h2>
+      <p>A young shepherd boy, who was bored while watching his sheep, decided to cry out, "Wolf! Wolf!" even though there was no wolf. </p>
+      <p>The villagers rushed to his aid, but when they arrived, they found that there was no wolf, and the boy laughed at having tricked them.</p>
+	 
+    </div>
+    <!-- Page 2 -->
+    <div class="page">
+	 <p>Later, when a real wolf appeared and threatened his sheep, the boy again shouted, "Wolf! Wolf!" But this time, the villagers did not believe him, thinking he was lying again. </p>
+      <p>As a result, the wolf attacked the sheep, and the boy learned a harsh lesson.</p>
+      <p>The moral of the story is: Liars are not believed, even when they tell the truth.</p>
+    </div>
+
+    <!-- Navigation buttons -->
+    <div class="book-nav">
+      <button class="prev" onclick="prevPage()">Previous</button>
+      <button class="next" onclick="nextPage()">Next</button>
+    </div>
+
+    <!-- Cover -->
+    <div class="cover cover-19" onclick="toggleBookCover(this)">
+      <div class="cover-back"></div>
+    </div>
+  </div>
+</div>
+
+<div class="book-wrapper" id="book5" style="display:none;">
+  <div class="book">
+    <!-- Page 1 -->
+    <div class="page">
+      <h2>THE TORTOISE AND THE HARE</h2>
+      <p>Once upon a time, in a big green forest, 
+	  there lived a speedy hare and a slow but steady tortoise. The hare loved to brag about how fast he could run. One day, he laughed at the tortoise and said, “I’m so fast, I bet you couldn’t beat me in a race!” </p>
+      <p>The tortoise smiled and said, “Maybe not, but I’d still like to try.” So, they set a date for the big race! All the forest animals came to watch.</p>
+    </div>
+    <!-- Page 2 -->
+    <div class="page">
+      <p>The squirrel, the owl, the deer—everyone was excited! When the race began, the hare zoomed ahead like lightning! He was so fast, the tortoise was left far behind.</p>
+      <p>The hare looked back, laughed, and said, “I’ve got plenty of time. I think I’ll take a little nap.” Meanwhile, the tortoise kept moving—step by step, slow and steady. He didn’t stop or look back. He just kept going.</p>
+    </div>
+	
+	  <div class="page">
+      <p>While the hare snored under a tree, the tortoise passed him quietly. When the hare woke up, he stretched and looked around—and gasped! “Oh no! The tortoise is almost at the finish line!”</p>
+      <p> He ran as fast as he could, but it was too late. The tortoise crossed the finish line first! All the animals cheered for the tortoise. The hare was surprised, but he learned something important that day.
+</p>
+    </div>
+
+    <!-- Navigation buttons -->
+    <div class="book-nav">
+      <button class="prev" onclick="prevPage()">Previous</button>
+      <button class="next" onclick="nextPage()">Next</button>
+    </div>
+
+    <!-- Cover -->
+    <div class="cover cover-20" onclick="toggleBookCover(this)">
+      <div class="cover-back"></div>
+    </div>
+  </div>
+</div>
+  </main>
+</body>
+</html>

@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BROOKIE</title>
+  <link rel="stylesheet" href="style.css">
+   <link rel="icon" type="png" href="LOGO/1.png">
+  <script type="text/javascript" src="app.js" defer></script>
+</head>
+<body>
+  <nav id="sidebar">
+    <ul>
+      <li>
+        <span class="logo">bR✮✮KIE</span>
+        <button onclick=toggleSidebar() id="toggle-btn">
+		<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M560-280 360-480l200-200v400Z"/></svg>
+        </button>
+      </li>
+      <li>
+        <a href="index.html">
+		<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M240-200h120v-240h240v240h120v-360L480-740 240-560v360Zm-80 80v-480l320-240 320 240v480H520v-240h-80v240H160Zm320-350Z"/></svg>
+          <span>Home</span>
+        </a>
+      </li>
+      <li>
+        <a href="Writing.html">
+		<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M200-200h57l391-391-57-57-391 391v57Zm-80 80v-170l528-527q12-11 26.5-17t30.5-6q16 0 31 6t26 18l55 56q12 11 17.5 26t5.5 30q0 16-5.5 30.5T817-647L290-120H120Zm640-584-56-56 56 56Zm-141 85-28-29 57 57-29-28Z"/></svg>
+          <span>Writing</span>
+        </a>
+      </li>
+      <li>
+        <button onclick=toggleSubMenu(this) class="dropdown-btn">
+		<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="m159-168-34-14q-31-13-41.5-45t3.5-63l72-156v278Zm160 88q-33 0-56.5-23.5T239-160v-240l106 294q3 7 6 13.5t8 12.5h-40Zm206-4q-32 12-62-3t-42-47L243-622q-12-32 2-62.5t46-41.5l302-110q32-12 62 3t42 47l178 488q12 32-2 62.5T827-194L525-84Zm-86-476q17 0 28.5-11.5T479-600q0-17-11.5-28.5T439-640q-17 0-28.5 11.5T399-600q0 17 11.5 28.5T439-560Zm58 400 302-110-178-490-302 110 178 490ZM319-650l302-110-302 110Z"/></svg>
+          <span>Flashcards</span>
+		<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"/></svg>
+        </button>
+        <ul class="sub-menu">
+          <div>
+            <li><a href="Numbers.html">Numbers</a></li>
+            <li><a href="Things.html">Things</a></li>
+            <li><a href="Animals.html">Animals</a></li>
+          </div>
+        </ul>
+      </li>
+      <li>
+        <button onclick=toggleSubMenu(this) class="dropdown-btn">
+		<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M400-400h160v-80H400v80Zm0-120h320v-80H400v80Zm0-120h320v-80H400v80Zm-80 400q-33 0-56.5-23.5T240-320v-480q0-33 23.5-56.5T320-880h480q33 0 56.5 23.5T880-800v480q0 33-23.5 56.5T800-240H320Zm0-80h480v-480H320v480ZM160-80q-33 0-56.5-23.5T80-160v-560h80v560h560v80H160Zm160-720v480-480Z"/></svg>
+          <span>Library</span>
+		  <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"/></svg>
+        </button>
+        <ul class="sub-menu">
+          <div>
+            <li><a href="Short Stories.html">Short Stories</a></li>
+            <li class="active"><a href="Fairy Tales.html">Fairy Tales</a></li>
+            <li><a href="Lullabies.html">Lullabies</a></li>
+            <li><a href="Fables.html">Fables</a></li>
+          </div>
+        </ul>
+      </li>     
+	  <li>
+        <a href="About.html">
+		<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M440-560q33 0 56.5-23.5T520-640q0-33-23.5-56.5T440-720q-33 0-56.5 23.5T360-640q0 33 23.5 56.5T440-560Zm0 160q45 0 84.5-19t68.5-54q-35-23-73.5-35T440-520q-41 0-79.5 12T287-473q29 35 68.5 54t84.5 19Zm384 280L636-308q-41 32-90.5 50T440-240q-134 0-227-93t-93-227q0-134 93-227t227-93q134 0 227 93t93 227q0 56-18 105.5T692-364l188 188-56 56ZM440-320q100 0 170-70t70-170q0-100-70-170t-170-70q-100 0-170 70t-70 170q0 100 70 170t170 70Zm0-240Z"/></svg>
+          <span>About</span>
+        </a>
+      </li>
+      <li>
+        <a href="Profile.html">
+		<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M480-480q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47ZM160-160v-112q0-34 17.5-62.5T224-378q62-31 126-46.5T480-440q66 0 130 15.5T736-378q29 15 46.5 43.5T800-272v112H160Zm80-80h480v-32q0-11-5.5-20T700-306q-54-27-109-40.5T480-360q-56 0-111 13.5T260-306q-9 5-14.5 14t-5.5 20v32Zm240-320q33 0 56.5-23.5T560-640q0-33-23.5-56.5T480-720q-33 0-56.5 23.5T400-640q0 33 23.5 56.5T480-560Zm0-80Zm0 400Z"/></svg>
+          <span>Profile</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+  <main>
+  <div class="tab-buttons">
+  <button class="tab" onclick="showBook(1)">Book 1</button>
+  <button class="tab" onclick="showBook(2)">Book 2</button>
+  <button class="tab" onclick="showBook(3)">Book 3</button>
+  <button class="tab" onclick="showBook(4)">Book 4</button>
+  <button class="tab" onclick="showBook(5)">Book 5</button>
+</div>
+
+<div class="book-wrapper" id="book1">
+  <div class="book">
+    <!-- Page 1 -->
+    <div class="page">
+      <h2>THE UGLY DUCKLING</h2>
+      <p>Once upon a time, a mommy duck had a big surprise! One of her eggs was huge, and out popped a duckling who looked a little…different. </p>
+      <p>He was gray and fluffy, not yellow and cute like his brothers and sisters. They teased him, and he felt really sad and lonely.
+	  He ran away and had some scary adventures, but he was all alone. Then, he found a beautiful lake. </p>
+    </div>
+    <!-- Page 3 -->
+    <div class="page">
+	  <p> It was sparkly and fun, with lots of reeds to hide in. He felt a little better there, even though he was still sad and missed his family. But then, something amazing happened! 
+	  He started to change!  His gray feathers turned white, and he grew taller and stronger. He wasn't a little gray duckling anymore! He was a beautiful, graceful swan! </p>
+      <p>And guess what?  Other swans welcomed him, showing him that it's okay to be different, and that being yourself is the best thing ever.</p>
+    </div>
+
+    <!-- Navigation buttons -->
+    <div class="book-nav">
+      <button class="prev" onclick="prevPage()">Previous</button>
+      <button class="next" onclick="nextPage()">Next</button>
+    </div>
+
+    <!-- Cover -->
+    <div class="cover cover-6" onclick="toggleBookCover(this)">
+      <div class="cover-back"></div>
+    </div>
+  </div>
+</div>
+
+<div class="book-wrapper" id="book2" style="display:none;">
+  <div class="book">
+    <!-- Page 1 -->
+    <div class="page">
+      <h2>SNOW WHITE</h2>
+      <p>Once upon a time, in a sparkly castle, a queen wished for a baby as beautiful as snow, red as blood, and dark as night!</p>
+	  <p>Her wish came true, but sadly, she went to live with the stars. </p>
+	   <p>Snow White's daddy got a new mommy, but she was a bit grumpy and only cared about being the prettiest. </p>
+      
+	</div>
+    <!-- Page 2 -->
+    <div class="page">
+	<p>When Snow White grew up, she was even prettier! The grumpy queen tried to get rid of her, first sending her to the forest with a hunter (but he was kind!), then sending her poisoned clothes and a comb.</p>
+	 <p>Finally, she tricked Snow White with a magic apple! Snow White fell into a deep, deep sleep. A handsome prince found her and woke her up with a kiss! </p>
+     <p>They had a hugewedding party in the castle, with yummy food and dancing.</p>  
+	
+	</div>
+	
+	<div class="page">
+        <p>The grumpy queen came, but the prince was ready for her! He sent her away to never be mean again, and Snow White and the prince lived happily ever after in their beautiful castle!</p>
+    </div>
+
+    <!-- Navigation buttons -->
+    <div class="book-nav">
+      <button class="prev" onclick="prevPage()">Previous</button>
+      <button class="next" onclick="nextPage()">Next</button>
+    </div>
+
+    <!-- Cover -->
+    <div class="cover cover-7" onclick="toggleBookCover(this)">
+      <div class="cover-back"></div>
+    </div>
+  </div>
+</div>
+
+<div class="book-wrapper" id="book3" style="display:none;">
+  <div class="book">
+    <!-- Page 1 -->
+    <div class="page">
+      <h2>12 DANCING PRINCESSES </h2>
+      <p>Once upon a time, a king had twelve princess daughters who loved to dance! Every night, their shoes would get all worn out, but nobody knew where they went. </p>
+      <p>The king said anyone who solved the mystery could marry one of his daughters and become king!  Lots of princes tried, but they all failed.</p>
+    </div>
+    <!-- Page 2 -->
+    <div class="page">
+      <p>Then, a brave soldier came along. A wise old woman gave him a magic cloak that made him invisible. </p>
+      <p> He followed the princesses through a secret passage, past trees made of silver, gold, and diamonds! They went to a lake where twelve handsome princes were waiting in boats. </p>
+	  <p>The soldier hid on a boat and saw the princesses dance all night in a magical castle! </p>
+    </div>
+    
+    <div class="page">
+      <p>He did this for three nights, collecting secret clues each time. He showed the king his clues, and the princesses had to admit they'd been dancing! </p>
+	  <p>The soldier married the eldest princess and became king! The other twelve princes got a silly punishment – they had to stay up all night for as many nights as they'd danced with the princesses!</p>
+	   <p>The end!</p>
+
+    </div>
+
+    <!-- Navigation buttons -->
+    <div class="book-nav">
+      <button class="prev" onclick="prevPage()">Previous</button>
+      <button class="next" onclick="nextPage()">Next</button>
+    </div>
+
+    <!-- Cover -->
+    <div class="cover cover-8" onclick="toggleBookCover(this)">
+      <div class="cover-back"></div>
+    </div>
+  </div>
+</div>
+
+<div class="book-wrapper" id="book4" style="display:none;">
+  <div class="book">
+    <!-- Page 1 -->
+    <div class="page">
+      <h2>THE ELVES AND THE SHOEMAKER</h2>
+      <p>Once upon a time, there was a poor shoemaker, with only enough leather for one pair of shoes, prays for help.</p>
+      <p>He wakes to find the shoes magically finished! He sells them, buys more leather, and the magic happens again and again until he's wealthy.</p>
+    </div>
+    <!-- Page 2 -->
+    <div class="page">
+      <p>Curious, he and his wife hide and watch two tiny elves finish the shoes at night. Feeling grateful, they make clothes and shoes for the elves as a thank you.</p>
+      <p>The elves, happily dressed, dance away, leaving the shoemaker to live happily ever after!</p>
+	  <p>This shows us that being thankful and kind to others, even if we don't know who they are, is really important and can bring good things our way!</p>
+ </div>
+    
+ 
+    <!-- Navigation buttons -->
+    <div class="book-nav">
+      <button class="prev" onclick="prevPage()">Previous</button>
+      <button class="next" onclick="nextPage()">Next</button>
+    </div>
+
+    <!-- Cover -->
+    <div class="cover cover-9" onclick="toggleBookCover(this)">
+      <div class="cover-back"></div>
+    </div>
+  </div>
+</div>
+
+<div class="book-wrapper" id="book5" style="display:none;">
+  <div class="book">
+    <!-- Page 1 -->
+    <div class="page">
+      <h2>THE LITTLE MERMAID</h2>
+      <p>Once upon a time, there was a sweet princess who lived under the sea, dreamed of the human world.</p>
+      <p>She secretly saved a handsome prince from a terrible storm, but he never knew it was her. 
+	  To become human, she made a deal with a grumpy sea witch—she'd get legs, but she'd lose her beautiful singing voice!  </p>
+	  <p>She bravely went to the prince's land. </p>
+    </div>
+    <!-- Page 2 -->
+    <div class="page">
+      <p>But sadly, he was already in love with a kind girl who had found him on the beach after the storm. </p>
+      <p>The Little Mermaid was heartbroken—she was going to disappear unless she could make the prince love her! Her loving sisters, with their long, flowing hair, gave up their beautiful locks to the sea witch in exchange for a magic knife.</p>
+	  <p>The knife was the only way for the mermaid to become a mermaid again, but she had to use it on the prince! </p>
+	  
+    </div>
+	
+	 <div class="page">
+      <p> But when she saw him sleeping peacefully next to the girl he loved, she couldn't do it.  </p>
+	  <p>With tears in her eyes, she threw the knife into the ocean and turned into beautiful, shimmering sea foam. 
+	  But even though she was gone, her spirit became a magical helper, bringing gentle breezes to the world, a secret, shimmering friend to everyone, forever remembered for her big, brave heart and her selfless love!</p>
+	  </div>
+
+    <!-- Navigation buttons -->
+    <div class="book-nav">
+      <button class="prev" onclick="prevPage()">Previous</button>
+      <button class="next" onclick="nextPage()">Next</button>
+    </div>
+
+    <!-- Cover -->
+    <div class="cover cover-10" onclick="toggleBookCover(this)">
+      <div class="cover-back"></div>
+    </div>
+  </div>
+</div>
+  </main>
+ </body>
+ </html>
